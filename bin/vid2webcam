@@ -1,0 +1,4 @@
+#!/bin/sh
+
+doas modprobe v4l2loopback exclusive_caps=1 card_label=VirtualVideoDevice
+ffmpeg -stream_loop -1 -re -i "$1" -vf hflip -f v4l2 /dev/video0

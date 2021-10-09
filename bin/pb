@@ -1,0 +1,26 @@
+#!/bin/sh
+
+awk '
+BEGIN {
+	bb=sprintf("+%78c+", " ");
+	bl=sprintf("|%78c|", " ");
+	gsub(" ", "-", bb);
+	printf("%s\n", bb);
+	printf("%s\n", bl);
+}
+{
+	gsub(/^ +/, "", $0);
+	x=sprintf("%d", (80 - length) / 2);
+	printf("|");
+	printf("%"x-1"c", " ");
+	printf $0;
+	printf("%"x-1"c", " ");
+	if (length % 2 != 0) printf(" ");
+	printf("|\n");
+
+}
+END {
+	printf("%s\n", bl);
+	printf("%s\n", bb);
+}
+'
