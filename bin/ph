@@ -1,3 +1,0 @@
-#!/bin/sh
-
-awk 'BEGIN {while (i++ < 80) printf "'$1'"}'

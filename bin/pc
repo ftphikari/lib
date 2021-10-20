@@ -1,8 +1,0 @@
-#!/bin/sh
-
-awk '{
-	gsub(/^ +/, "", $0);
-	x=sprintf("%d", (80 - length) / 2);
-	printf(" %"x"c", " ");
-	print $0;
-}'

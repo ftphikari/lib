@@ -3,4 +3,4 @@
 key="$1"
 shift
 
-GIT_SSH_COMMAND="ssh -i ~/.ssh/${key}.key -o IdentitiesOnly=yes" "$@"
+GIT_SSH_COMMAND="ssh -i ~/.ssh/${key}.key -o IdentitiesOnly=yes" git "$@"
