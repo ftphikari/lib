@@ -15,5 +15,5 @@ export PATH=~/bin:~/lib/bin:$ODIN_ROOT:$PATH
 
 killall ssh-agent
 eval "$(ssh-agent)"
-ssh-add ~/.ssh/hikari.key
-. ~/lib/hikari.profile
+#ssh-add ~/.ssh/hikari.key
+#. ~/lib/hikari.profile
