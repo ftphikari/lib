@@ -1,7 +1,4 @@
 export srv="follow@104.131.125.44 -p 1337"
-export EMAIL=ftphikari@gmail.com
-export GIT_COMMITTER_NAME=hikari
-export GIT_AUTHOR_NAME=hikari
 export GIT_EDITOR=vim
 export GOPATH=~/go
 export GOBIN=~/bin
@@ -19,3 +16,4 @@ export PATH=~/bin:~/lib/bin:$ODIN_ROOT:$PATH
 killall ssh-agent
 eval "$(ssh-agent)"
 ssh-add ~/.ssh/hikari.key
+. ~/lib/hikari.profile
