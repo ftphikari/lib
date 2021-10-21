@@ -1,0 +1,6 @@
+#!/bin/sh
+
+id="$1"
+shift
+
+ssh -i ~/.ssh/${id}.key "$@"
