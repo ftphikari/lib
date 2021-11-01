@@ -1,0 +1,15 @@
+#!/bin/sh
+
+if test "$#" -ne 2; then
+  echo "usage: gpg-decrypt IN OUT" >&2
+  exit 1
+fi
+
+in="$1"
+shift
+
+out="$1"
+shift
+
+read -p "password for ${in}?: " PASSWD
+gpg --batch --passphrase "$PASSWD" -o ${out} -d ${in}

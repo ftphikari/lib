@@ -1,4 +1,3 @@
-export srv="follow@104.131.125.44 -p 1337"
 export GIT_EDITOR=vim
 export GOPATH=~/go
 export GOBIN=~/bin
