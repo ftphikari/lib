@@ -51,8 +51,3 @@ nnoremap <C-b> :buffers<CR>:buffer<Space>
 nnoremap <C-o> :e<Space>
 nnoremap <C-s> :w<CR>
 nnoremap r <C-R>
-
-" local build commands
-nnoremap <F4> :cd %:h<CR>
-nnoremap <F5> :!clear; ./build run<CR>
-nnoremap <F6> :!clear; ./build<CR>
