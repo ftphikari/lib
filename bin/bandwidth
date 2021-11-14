@@ -8,4 +8,4 @@ read -r lol
 
 fin="$((`cat /sys/class/net/[ew]*/statistics/rx_bytes | paste -sd '+'`))"
 
-printf '%4sB of bandwidth used.\n' `numfmt --to=iec $(($fin-$init))`
+printf '%4sb of bandwidth used.\n' `numfmt --to=iec $(($fin-$init))`
