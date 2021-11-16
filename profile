@@ -1,4 +1,5 @@
-export GIT_EDITOR=vim
+export MICRO_CONFIG_HOME=~/lib/micro
+export GIT_EDITOR=e
 export GOPATH=~/go
 export GOBIN=~/bin
 export ODIN_ROOT=~/odin

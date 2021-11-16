@@ -1,0 +1,12 @@
+{
+    "autoclose": false,
+    "clipboard": "terminal",
+    "colorcolumn": 80,
+    "parsecursor": true,
+    "rmtrailingws": true,
+    "savecursor": true,
+    "saveundo": true,
+    "softwrap": true,
+    "sucmd": "doas",
+    "tabsize": 2
+}

@@ -6,9 +6,6 @@ mkdir -p ~/{bin,src}
 curl -Lo ~/bin/findssh https://github.com/ftphikari/findssh/releases/download/1.0.0/findssh.elf
 chmod +x ~/bin/*
 
-rm -f ~/.vimrc
-ln -sf ~/lib/vimrc ~/.vimrc
-
 grep 'lib/profile' ~/.bash_profile || sed -i '1s!^!. ~/lib/profile\n!' ~/.bash_profile
 
 doas sh -c 'mkdir -p /etc/sway/config.d/
