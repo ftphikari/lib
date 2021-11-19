@@ -2,7 +2,7 @@ export MICRO_CONFIG_HOME=~/lib/micro
 export GIT_EDITOR=e
 export GOPATH=~/go
 export GOBIN=~/bin
-#export ODIN_ROOT=~/odin
+export ODIN_ROOT=~/odin
 export ODIN_SHARED=~/src
 
 export PATH=~/bin:~/lib/bin:$ODIN_ROOT:$PATH
