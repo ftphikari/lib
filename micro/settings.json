@@ -1,4 +1,7 @@
 {
+    "*.odin": {
+        "filetype": "go"
+    },
     "autoclose": false,
     "clipboard": "terminal",
     "colorcolumn": 80,
