@@ -8,6 +8,12 @@ chmod +x ~/bin/*
 
 grep 'lib/profile' ~/.bash_profile || sed -i '1s!^!. ~/lib/profile\n!' ~/.bash_profile
 
+mkdir -p ~/.local/share/applications/
+ln -fs ~/lib/discord.desktop ~/.local/share/applications/discord.desktop
+
+mkdir -p ~/.local/share/icons/
+ln -fs ~/lib/discord.svg ~/.local/share/icons/discord.svg
+
 doas sh -c 'mkdir -p /etc/sway/config.d/
 cat >/etc/sway/config.d/wlsunset.conf <<EOF
 exec wlsunset -l 49.4 -L 36.6
