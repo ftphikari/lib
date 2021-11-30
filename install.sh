@@ -1,6 +1,6 @@
 #!/bin/sh
 
-yay -Syy --noconfirm --needed go qrencode upx telegram-desktop v4l2loopback-dkms rclone gnirehtet-bin
+yay -Syy --noconfirm --needed go qrencode upx telegram-desktop v4l2loopback-dkms rclone gnirehtet-bin gf-debugger-git
 
 mkdir -p ~/{bin,src}
 curl -Lo ~/bin/findssh https://github.com/ftphikari/findssh/releases/download/1.0.0/findssh.elf
@@ -13,6 +13,9 @@ ln -fs ~/lib/discord.desktop ~/.local/share/applications/discord.desktop
 
 mkdir -p ~/.local/share/icons/
 ln -fs ~/lib/discord.svg ~/.local/share/icons/discord.svg
+
+mkdir -p ~/.config/
+ln -fs ~/lib/gf2_config.ini ~/.config/gf2_config.ini
 
 doas sh -c 'mkdir -p /etc/sway/config.d/
 cat >/etc/sway/config.d/wlsunset.conf <<EOF
