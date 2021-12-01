@@ -1,0 +1,29 @@
+init random
+	rand.set_global_seed(auto_cast time.now()._nsec)
+
+random in range
+	rand.uint32() % range
+
+memory arena
+	Kilobyte :: 1000
+	Megabyte :: 1000 * Kilobyte
+	arena: mem.Arena
+	memory, err := mem.alloc_bytes(10 * Megabyte)
+	mem.init_arena(&arena, memory)
+	context.allocator = mem.arena_allocator(&arena)
+
+temp arena memory
+	temp_memory := mem.begin_arena_temp_memory(&arena)
+	mem.end_arena_temp_memory(temp_memory)
+
+SOA
+	v_soa := make_soa(#soa[dynamic]int, SIZE)
+	append_soa(&v_soa, int)
+
+read lines
+	r: bufio.Reader
+	bufio.reader_init(&r, io.Reader{os.stream_from_handle(os.stdin)})
+	b, err := bufio.reader_read_slice(&r, '\n')
+	assert(err == .None)
+	line := string(b)
+	trimmed := strings.trim_space(line)
