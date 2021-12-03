@@ -10,6 +10,5 @@
     "savecursor": true,
     "saveundo": true,
     "softwrap": true,
-    "sucmd": "doas",
-    "tabsize": 2
+    "sucmd": "doas"
 }

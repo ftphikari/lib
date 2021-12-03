@@ -1,1 +1,2 @@
-odin syntax
+add odin syntax highlighting
+check if bufio.reader_read_slice allocates any memory
