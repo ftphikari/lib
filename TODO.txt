@@ -1,2 +1,2 @@
 add odin syntax highlighting
-check if bufio.reader_read_slice allocates any memory
+what happens if i fail to encrypt/decrypt the disk?
