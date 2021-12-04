@@ -22,7 +22,8 @@ SOA
 
 read lines
 	r: bufio.Reader
-	bufio.reader_init(&r, io.Reader{os.stream_from_handle(os.stdin)})
+	bufio.reader_init(&r, io.to_reader(os.stream_from_handle(os.stdin)))
+	defer bufio.reader_destroy(&r)
 	b, err := bufio.reader_read_slice(&r, '\n')
 	assert(err == .None)
 	line := string(b)
