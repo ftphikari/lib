@@ -1,10 +1,10 @@
 {
-    "*.odin": {
-        "filetype": "go"
-    },
     "autoclose": false,
     "clipboard": "terminal",
     "colorcolumn": 80,
+    "ft:git-commit": {
+        "colorcolumn": 50
+    },
     "parsecursor": true,
     "rmtrailingws": true,
     "savecursor": true,
