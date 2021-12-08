@@ -20,21 +20,41 @@ SOA
 	v_soa := make_soa(#soa[dynamic]int, SIZE)
 	append_soa(&v_soa, int)
 
+open file
+	fd, err := os.open(FILENAME, os.O_RDONLY, 0)
+	assert(err == os.ERROR_NONE)
+
+read full file
+	buf: [256]byte
+	for {
+		n, err := os.read(fd, buf[:])
+		assert(err == os.ERROR_NONE)
+		if n == 0 do break // EOF
+	}
+
 read lines
 	r: bufio.Reader
-	bufio.reader_init(&r, io.to_reader(os.stream_from_handle(os.stdin)))
+	bufio.reader_init(&r, io.to_reader(os.stream_from_handle(fd)))
 	defer bufio.reader_destroy(&r)
 	b, err := bufio.reader_read_slice(&r, '\n')
 	assert(err == .None)
 	line := string(b)
 	trimmed := strings.trim_space(line)
 
-read full file
-	buf: [256]byte
-	fd, err := os.open(FILENAME, os.O_RDONLY, 0)
-	assert(err == os.ERROR_NONE)
-	for {
-		n, err := os.read(fd, buf[:])
-		assert(err == os.ERROR_NONE)
-		if n == 0 do break // EOF
+get string size in bytes
+	str := "Hello, 世界!"
+	len(str)
+
+get string size in runes
+	utf8.rune_count_in_string(str)
+
+iterate over bytes in string
+	for i in 0..<len(str) {
+		c := rune(str[i])
+		fmt.println(i, c)
+	}
+
+iterate over runes in string
+	for c, i in str {
+		fmt.println(i, c)
 	}
