@@ -28,3 +28,13 @@ read lines
 	assert(err == .None)
 	line := string(b)
 	trimmed := strings.trim_space(line)
+
+read full file
+	buf: [256]byte
+	fd, err := os.open(FILENAME, os.O_RDONLY, 0)
+	assert(err == os.ERROR_NONE)
+	for {
+		n, err := os.read(fd, buf[:])
+		assert(err == os.ERROR_NONE)
+		if n == 0 do break // EOF
+	}
