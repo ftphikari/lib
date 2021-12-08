@@ -7,7 +7,7 @@ rules:
     # Conditionals and control flow
     - special: "\\b(asm|auto_cast|break|case|cast|context|continue|do|dynamic|fallthrough|return|transmute|using|where)\\b"
     - statement: "\\b(else|for|if|switch|in|not_in|or_else|or_return|when)\\b"
-    - preproc: "\\b(assert|package|foreign|import|proc|defer|make|new|free|delete|copy|len|cap|append)\\b"
+    - preproc: "\\b(assert|package|foreign|import|proc|defer|make|new|free|delete|copy|len|cap|append|raw_data)\\b"
     - preproc: "\\b((size|align|offset|type|type_info|typeid)_of|offset_of_by_string)\\b"
     - preproc: "\\b(swizzle|complex|quaternion|real|imag|jmag|kmag|conj|expand_to_tuple|min|max|abs|clamp|soa_zip|soa_unzip|transpose|outer_product|hadamard_product|matrix_flatten)\\b"
     - symbol.operator: "[-+/*=<>!~%&|^@]|:\\s*=|:\\s*:|\\?"
