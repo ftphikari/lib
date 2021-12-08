@@ -26,10 +26,11 @@ open file
 
 read full file
 	buf: [256]byte
-	for {
-		n, err := os.read(fd, buf[:])
+	read := 1
+	for read > 0 { // EOF
+		err: os.Errno
+		read, err = os.read(fd, buf[:])
 		assert(err == os.ERROR_NONE)
-		if n == 0 do break // EOF
 	}
 
 read lines
