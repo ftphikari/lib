@@ -1,2 +1,0 @@
-add odin syntax highlighting
-what happens if i fail to encrypt/decrypt the disk?
