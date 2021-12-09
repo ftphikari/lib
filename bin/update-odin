@@ -1,6 +1,6 @@
 #!/bin/sh
 
-date="$(date '+%Y-%m-%d' -d '-2 day')"
+date="$(date '+%Y-%m-%d' -d '-1 day')"
 cd /tmp/
 echo downloading Odin from $date
 curl -Lfo odin_${date}.zip "https://f001.backblazeb2.com/file/odin-binaries/nightly/odin-ubuntu-amd64-nightly%2B${date}.zip" || { echo error; exit; }
