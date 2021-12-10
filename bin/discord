@@ -1,4 +1,3 @@
 #!/bin/sh
 
-#google-chrome-stable --enable-features=WebRTCPipeWireCapturer,UseOzonePlatform,VaapiVideoDecoder --ozone-platform=wayland --app=http://discord.com/app "$@"
-google-chrome-stable --app=http://discord.com/app "$@"
+chromium --app=http://discord.com/app "$@"

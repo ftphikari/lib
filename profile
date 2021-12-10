@@ -6,11 +6,10 @@ export ODIN_ROOT=~/odin
 
 export PATH=~/bin:~/lib/bin:$ODIN_ROOT:$PATH
 
-# for performance
-#gsettings set org.gnome.desktop.interface enable-animations false
-
-# does not have previews, so i use icon-view (default)
-#gsettings set org.gnome.nautilus.preferences default-folder-viewer list-view
+export EMAIL=ftphikari@protonmail.com
+export GIT_COMMITTER_NAME=hikari
+export GIT_AUTHOR_NAME=hikari
+export GIT_SSH_COMMAND="ssh -i ~/.ssh/hikari.key -o IdentitiesOnly=yes"
 
 killall ssh-agent
 eval "$(ssh-agent)"

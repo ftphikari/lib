@@ -1,8 +1,0 @@
-#!/bin/sh
-
-id="$1"
-shift
-
-. ~/lib/${id}.profile
-
-GIT_SSH_COMMAND="ssh -i ~/.ssh/${id}.key -o IdentitiesOnly=yes" git "$@"

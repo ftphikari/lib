@@ -11,4 +11,3 @@ install_key() {
 }
 
 install_key hikari.key
-install_key aajonus.key
