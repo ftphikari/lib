@@ -1,0 +1,30 @@
+instead of "slabs" we have "pieces", which are 1/4 size of the block
+i don't want jumping to be necessary, so the world spawns in pieces, not in blocks
+with only your hand, you can only destroy pieces, tools give the ability to destroy blocks
+hitbox is drawn over 1 "block" or "slab" based on its position in space
+destroying 1 "block" will just get you 4 pieces of material still
+some blocks are brittle and not drop anything, or drop randomly
+glass and obsidian doesn't drop anything when broken
+glass can be obtained by smelting sand in blast furnace
+obsidian piece by itself cannot be obtained, but casting lava into a shape you want will make an obsidian part
+it is always 1 part per 1 unit of lava
+for example, obsidian blade that can be made into a sword
+pieces of rock spawn on the surface grass sometimes on one of 4 corners of the block
+
+ores are not blocks, but pieces that spawn in palce of rock pieces sometimes
+
+obsidian tools break really quickly, but also do lots of damage, one-hitting almost any mob
+diamond tools do 3 times less damage than obsidian, but do not break for a long time
+
+tools mine faster than hands, but they do not increase mining speed with upgrades
+
+nothing can be infinitely repaired, everything breaks eventually
+however tools also serve more time normally than in minecraft
+
+shift-mining mines only bits, not whole blocks
+
+bit textures are just 1/4th of 16x16 texture that is placed based on x/y coordinates
+
+todo: how do water and lava physics work?
+
+todo: maybe there are even "bits" which are 1/8th of a block or 1/16th?
