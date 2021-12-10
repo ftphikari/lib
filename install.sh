@@ -1,6 +1,6 @@
 #!/bin/sh
 
-yay -Syy --noconfirm --needed go qrencode upx telegram-desktop v4l2loopback-dkms rclone gnirehtet-bin gf-debugger-git
+yay -Syy --noconfirm --needed go qrencode upx telegram-desktop rclone gnirehtet-bin gf-debugger-git
 
 mkdir -p ~/{bin,dev}
 curl -Lo ~/bin/findssh https://github.com/ftphikari/findssh/releases/download/1.0.0/findssh.elf
