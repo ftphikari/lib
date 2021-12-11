@@ -2,7 +2,7 @@
 
 sudo add-apt-repository ppa:atareao/telegram
 apt update
-apt install -y git-gui golang telegram qrencode upx rclone libfreetype-dev libx11-dev ffmpeg
+apt install -y git-gui golang telegram qrencode upx rclone libfreetype-dev libx11-dev ffmpeg clang
 
 grep 'lib/profile' ~/.profile || echo '. ~/lib/profile' >> ~/.profile
 

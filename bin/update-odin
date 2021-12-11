@@ -7,5 +7,4 @@ curl -Lfo odin_${date}.zip "https://f001.backblazeb2.com/file/odin-binaries/nigh
 unzip -q odin_${date}.zip
 rm -rf ~/odin
 mv ubuntu_artifacts ~/odin
-patchelf --replace-needed libLLVM-11.so.1 libLLVM-11.so ~/odin/odin
 chmod +x ~/odin/odin
