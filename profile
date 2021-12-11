@@ -15,7 +15,9 @@ eval "$(ssh-agent)"
 
 read -d '' CHROMIUM_FLAGS << FLAGS
 --force-dark-mode
---enable-features=WebUIDarkMode,VaapiVideoDecoder,WebRTCPipeWireCapturer
+--enable-features=WebUIDarkMode
+--enable-features=WebRTCPipeWireCapturer
+--enable-features=VaapiVideoDecoder
 --disable-gpu-rasterization
 FLAGS
 export CHROMIUM_FLAGS
