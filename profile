@@ -10,5 +10,12 @@ export GIT_COMMITTER_NAME=hikari
 export GIT_AUTHOR_NAME=hikari
 export GIT_SSH_COMMAND="ssh -i ~/.ssh/hikari.key -o IdentitiesOnly=yes"
 
-killall ssh-agent
+pgrep ssh-agent && killall ssh-agent
 eval "$(ssh-agent)"
+
+read -d '' CHROMIUM_FLAGS << FLAGS
+--force-dark-mode
+--enable-features=WebUIDarkMode,VaapiVideoDecoder,WebRTCPipeWireCapturer
+--disable-gpu-rasterization
+FLAGS
+export CHROMIUM_FLAGS
