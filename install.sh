@@ -10,6 +10,7 @@ grep 'lib/profile' ~/.bash_profile || sed -i '1s!^!. ~/lib/profile\n!' ~/.bash_p
 
 mkdir -p ~/.local/share/applications/
 ln -fs ~/lib/discord.desktop ~/.local/share/applications/discord.desktop
+chmod +x ~/.local/share/applications/discord.desktop
 
 mkdir -p ~/.local/share/icons/
 ln -fs ~/lib/discord.svg ~/.local/share/icons/discord.svg
