@@ -1,5 +1,4 @@
-export MICRO_CONFIG_HOME=~/lib/micro
-export GIT_EDITOR=e
+export GIT_EDITOR='xed -s'
 export GOPATH=~/go
 export GOBIN=~/bin
 export ODIN_ROOT=~/odin
