@@ -14,8 +14,6 @@ pgrep ssh-agent && killall ssh-agent
 eval "$(ssh-agent)"
 
 read -d '' CHROMIUM_FLAGS << FLAGS
---force-dark-mode
---enable-features=WebUIDarkMode
 --enable-features=WebRTCPipeWireCapturer
 --enable-features=VaapiVideoDecoder
 --disable-gpu-rasterization
