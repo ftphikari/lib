@@ -1,3 +1,4 @@
 #!/bin/sh
+# should probably just be an alias idk
 
-xed -s "$@"
+micro "$@"

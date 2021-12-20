@@ -1,3 +1,4 @@
 #!/bin/sh
+# get thumbnail from youtube
 
 youtube-dl --write-thumbnail --skip-download "$@"

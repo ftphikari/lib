@@ -1,3 +1,4 @@
 #!/bin/sh
+# mpv but don't save playback
 
 mpv --no-resume-playback "$@"

@@ -1,4 +1,5 @@
 #!/bin/sh
+# measure bandwidth
 
 init="$((`cat /sys/class/net/[ew]*/statistics/rx_bytes | paste -sd '+'`))"
 

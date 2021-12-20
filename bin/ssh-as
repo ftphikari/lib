@@ -1,4 +1,5 @@
 #!/bin/sh
+# ssh as identity into the server
 
 id="$1"
 shift

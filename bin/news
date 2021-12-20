@@ -1,0 +1,8 @@
+#!/bin/sh
+# show rss news
+
+while true; do
+ url="$(sfeed_plain ${HOME}/.cache/sfeed/feeds/* | sort -r | bemenu -l 33 -p news -i | sed -n 's@^.* \([a-zA-Z]*://\)\(.*\)$@\1\2@p')"
+ test -z "$url" && exit
+ xdg-open "$url" &
+done

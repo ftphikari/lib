@@ -1,10 +1,18 @@
-#!/bin/sh
+#!/bin/sh -e
+# update Odin language compiler
 
-date="$(date '+%Y-%m-%d' -d '-1 day')"
-cd /tmp/
-echo downloading Odin from $date
-curl -Lfo odin_${date}.zip "https://f001.backblazeb2.com/file/odin-binaries/nightly/odin-ubuntu-amd64-nightly%2B${date}.zip" || { echo error; exit; }
-unzip -q odin_${date}.zip
-rm -rf ~/odin
-mv ubuntu_artifacts ~/odin
-chmod +x ~/odin/odin
+test -d ~/dev/odin/ || git clone https://github.com/odin-lang/Odin.git ~/dev/odin/
+cd ~/dev/odin/
+
+# check if pull is needed
+local_commit=$(git rev-parse HEAD)
+remote_commit=$(git ls-remote origin -h refs/heads/master | cut -f 1)
+#test "$local_commit" != "$remote_commit"
+
+git pull
+# mold seems to be not much faster on my core2
+#mold -run \
+make release_native
+rm -rf ~/odin/
+mkdir -p ~/odin/
+cp -r odin core vendor shared examples ~/odin/

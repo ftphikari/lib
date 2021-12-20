@@ -1,4 +1,5 @@
 #!/bin/sh
+# decrypt gpg file
 
 if test "$#" -ne 2; then
   echo "usage: gpg-decrypt IN OUT" >&2

@@ -1,0 +1,6 @@
+#!/bin/sh
+# update rss news
+
+notify-send 'News update started'
+sfeed_update ~/lib/sfeedrc 2>~/.cache/sfeed/latest_update.log
+notify-send 'News update finished'

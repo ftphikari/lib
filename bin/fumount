@@ -1,0 +1,4 @@
+#!/bin/sh
+# fuse unmount
+
+fusermount -u "$@"

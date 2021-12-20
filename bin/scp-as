@@ -1,0 +1,7 @@
+#!/bin/sh
+# scp as identity into the server
+
+id="$1"
+shift
+
+scp -i ~/.ssh/${id}.key "$@"
