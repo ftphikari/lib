@@ -82,4 +82,5 @@ feeds() {
 	feed 'Showcase | Site-wide | Handmade.Network' 'https://handmade.network/atom/showcase'
 	feed 'Alpine Linux News' 'https://alpinelinux.org/atom.xml'
 	feed 'This Week in GNOME' 'https://thisweek.gnome.org/index.xml'
+	feed 'LindyPress.net' 'https://lindypress.net/rss.xml'
 }
