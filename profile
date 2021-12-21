@@ -1,3 +1,6 @@
+export HISTFILE=~/.cache/shell_history
+export HISTSIZE=10000
+
 export MICRO_CONFIG_HOME=~/lib/micro
 export GIT_EDITOR=e
 export GOPATH=~/go
