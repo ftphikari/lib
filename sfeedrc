@@ -72,6 +72,7 @@ feeds() {
 	feed 'PewDiePie' 'https://www.youtube.com/feeds/videos.xml?channel_id=UC-lHJZR3Gqxm24_Vd_AJ5Yw'
 	feed 'SB737' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCFrVj6wBM42y3XuKCAj8n5A'
 	feed 'Fairbairn Films' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCFrj6EBhnHlWqmvuwH1Ue4g'
+	feed 'xmdi' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCDNCqs2pvtW3S-Iys-2ATMw'
 
 	# blogs
 	feed 'Drew DeVault'\''s blog' 'https://drewdevault.com/blog/index.xml'
