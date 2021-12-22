@@ -21,7 +21,7 @@ git clone git@github.com:ftphikari/lib ~/lib
 
 grep 'lib/profile' ~/.bashrc || echo '. ~/lib/profile' >> ~/.bashrc
 
-yay --needed --noconfirm -Syyuu telegram-desktop go rclone clang sfeed trash-cli
+yay --needed --noconfirm -Syyuu telegram-desktop go rclone clang llvm11 sfeed trash-cli
 
 curl -Lo ~/bin/findssh https://github.com/ftphikari/findssh/releases/download/1.0.0/findssh.elf
 
