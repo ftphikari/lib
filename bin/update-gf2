@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/sh
 # update gf2 debugger
 
 test -d ~/dev/gf2/ || git clone https://github.com/nakst/gf.git ~/dev/gf2
@@ -7,12 +7,10 @@ cd ~/dev/gf2/
 # check if pull is needed
 local_commit=$(git rev-parse HEAD)
 remote_commit=$(git ls-remote origin -h refs/heads/master | cut -f 1)
-test "$local_commit" != "$remote_commit"
+test "$local_commit" = "$remote_commit" && exit
 
 git pull
 export extra_flags='-march=native'
-# mold seems to be not much faster on my core2
-#mold -run \
 sh build.sh
 strip gf2
 mv gf2 ~/bin/
