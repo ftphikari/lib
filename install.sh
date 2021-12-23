@@ -47,8 +47,8 @@ EOF
 
 cat >/etc/sway/config.d/news.conf <<EOF
 bindsym --to-code {
- Mod4+n exec news
- Mod4+Shift+n exec news-update
+ XF86Launch1 exec news
+ Shift+XF86Launch1 exec news-update
 }
 EOF
 '
