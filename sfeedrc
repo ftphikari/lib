@@ -74,6 +74,7 @@ feeds() {
 	feed 'Fairbairn Films' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCFrj6EBhnHlWqmvuwH1Ue4g'
 	feed 'xmdi' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCDNCqs2pvtW3S-Iys-2ATMw'
 	feed 'That Japanese Man Yuta' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCn7LyBvG5LEBXK9I4W5dGdA'
+	feed ' Anton Swifton' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCuvheEOyEKGCLHPGqn7gnFA'
 
 	# blogs
 	feed 'Drew DeVault'\''s blog' 'https://drewdevault.com/blog/index.xml'
