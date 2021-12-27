@@ -1,15 +1,17 @@
 #!/bin/sh
 # update Odin language compiler
 
-test -d ~/dev/odin/ || git clone https://github.com/odin-lang/Odin.git ~/dev/odin/
+test -d ~/dev/odin/ || { git clone https://github.com/odin-lang/Odin.git ~/dev/odin/; new=1 }
 cd ~/dev/odin/
 
-# check if pull is needed
-local_commit=$(git rev-parse HEAD)
-remote_commit=$(git ls-remote origin -h refs/heads/master | cut -f 1)
-test "$local_commit" = "$remote_commit" && exit
+test "$new" != "1" && {
+ # check if pull is needed
+ local_commit=$(git rev-parse HEAD)
+ remote_commit=$(git ls-remote origin -h refs/heads/master | cut -f 1)
+ test "$local_commit" = "$remote_commit" && exit
+ git pull
+}
 
-git pull
 make release_native
 rm -rf ~/odin/
 mkdir -p ~/odin/
