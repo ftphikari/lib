@@ -1,15 +1,17 @@
 #!/bin/sh
 # update gf2 debugger
 
-test -d ~/dev/gf2/ || git clone https://github.com/nakst/gf.git ~/dev/gf2
+test -d ~/dev/gf2/ || { git clone https://github.com/nakst/gf.git ~/dev/gf2; new=1; }
 cd ~/dev/gf2/
 
-# check if pull is needed
-local_commit=$(git rev-parse HEAD)
-remote_commit=$(git ls-remote origin -h refs/heads/master | cut -f 1)
-test "$local_commit" = "$remote_commit" && exit
+test "$new" != "1" && {
+ # check if pull is needed
+ local_commit=$(git rev-parse HEAD)
+ remote_commit=$(git ls-remote origin -h refs/heads/master | cut -f 1)
+ test "$local_commit" = "$remote_commit" && exit
+ git pull
+}
 
-git pull
 export extra_flags='-march=native'
 sh build.sh
 strip gf2
