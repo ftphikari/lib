@@ -25,17 +25,10 @@ yay --needed --noconfirm -Syyuu telegram-desktop go rclone tcc clang llvm11 sfee
 
 curl -Lo ~/bin/findssh https://github.com/ftphikari/findssh/releases/download/1.0.0/findssh.elf
 
-mkdir -p ~/dev/
-cd ~/dev/
-git clone https://github.com/nakst/gf gf2
-cd gf2
-./build.sh
-mv gf2 ~/bin/
+chmod +x ~/bin/*
 
 mkdir -p ~/.config/
 ln -fs ~/lib/gf2_config.ini ~/.config/gf2_config.ini
-
-chmod +x ~/bin/*
 
 doas sh -c '
 cat >/etc/sway/config.d/wlsunset.conf <<EOF
