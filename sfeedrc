@@ -68,13 +68,12 @@ feeds() {
 	feed 'Niccolo Ve' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCONH73CdRXUjlh3-DdLGCPw'
 	feed 'Mental Outlaw' 'https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA'
 	feed 'BOLDcast' 'https://www.youtube.com/feeds/videos.xml?channel_id=UC2WUTAQ-quWmVCA_dcgr3Kg'
-	feed 'Brodie Robertson' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA'
 	feed 'PewDiePie' 'https://www.youtube.com/feeds/videos.xml?channel_id=UC-lHJZR3Gqxm24_Vd_AJ5Yw'
 	feed 'SB737' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCFrVj6wBM42y3XuKCAj8n5A'
 	feed 'Fairbairn Films' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCFrj6EBhnHlWqmvuwH1Ue4g'
 	feed 'xmdi' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCDNCqs2pvtW3S-Iys-2ATMw'
 	feed 'That Japanese Man Yuta' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCn7LyBvG5LEBXK9I4W5dGdA'
-	feed ' Anton Swifton' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCuvheEOyEKGCLHPGqn7gnFA'
+	feed 'Anton Swifton' 'https://www.youtube.com/feeds/videos.xml?channel_id=UCuvheEOyEKGCLHPGqn7gnFA'
 
 	# blogs
 	feed 'Drew DeVault'\''s blog' 'https://drewdevault.com/blog/index.xml'
