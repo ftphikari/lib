@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # update Odin language compiler
 
 test -d ~/dev/odin/ || { git clone https://github.com/odin-lang/Odin.git ~/dev/odin/; new=1; }
