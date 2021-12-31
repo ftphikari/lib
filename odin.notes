@@ -1,4 +1,6 @@
 init random
+	import "core:time"
+	import "core:math/rand"
 	rand.set_global_seed(auto_cast time.now()._nsec)
 
 random in range
