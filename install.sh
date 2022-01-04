@@ -13,21 +13,24 @@ install_key() {
 
 mkdir -p ~/dev ~/bin
 
-sudo apt install -y curl git-gui entr tcc golang-go clang libllvm11
+sudo apt install -y curl ripgrep git-gui entr \
+make tcc golang-go golang-golang-x-tools clang \
+llvm-11-dev libgtk-3-dev
 
 curl -Lo /tmp/hikari.key.gpg https://github.com/ftphikari/lib/raw/main/hikari.key.gpg
 
 install_key /tmp/hikari.key
 
 export GIT_SSH_COMMAND="ssh -i ~/.ssh/hikari.key -o IdentitiesOnly=yes"
-export GOBIN=~/bin
+export GOPATH=~/go
+
+go install github.com/ftphikari/findssh@latest
+go install github.com/mdempsky/gocode@latest
 
 git clone git@github.com:ftphikari/lib ~/lib
 
 grep 'lib/profile' ~/.bashrc || echo '. ~/lib/profile' >> ~/.bashrc
 
-go install github.com/ftphikari/findssh@v1.0.1
-
 mkdir -p ~/.config
 ln -fs ~/lib/gf2_config.ini ~/.config/gf2_config.ini
-
+ln -fs ~/lib/howl ~/.config/howl

@@ -1,13 +1,11 @@
 export HISTFILE=~/.cache/shell_history
 export HISTSIZE=10000
 
-export MICRO_CONFIG_HOME=~/lib/micro
-export GIT_EDITOR=e
+export GIT_EDITOR=howl
 export GOPATH=~/go
-export GOBIN=~/bin
 export ODIN_ROOT=~/odin
 
-export PATH=~/bin:~/lib/bin:$ODIN_ROOT:$PATH
+export PATH=~/bin:~/lib/bin:${GOPATH}/bin:$ODIN_ROOT:$PATH
 
 export EMAIL=ftphikari@protonmail.com
 export GIT_COMMITTER_NAME=hikari
