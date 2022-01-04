@@ -7,5 +7,5 @@ with config
   .go_fmt_command = 'goimports'
 
 bindings.push
-  ctrl_q: 'close'
-  ctrl_e: 'run'
+  ctrl_q: 'run'
+  ctrl_e: 'switch-to-last-hidden-buffer'
