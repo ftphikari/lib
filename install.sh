@@ -33,4 +33,6 @@ grep 'lib/profile' ~/.bashrc || echo '. ~/lib/profile' >> ~/.bashrc
 
 mkdir -p ~/.config
 ln -fs ~/lib/gf2_config.ini ~/.config/gf2_config.ini
+mkdir -p ~/.config/mpv
+ln -fs ~/lib/mpv.conf ~/.config/mpv.conf
 ln -fs ~/lib/howl ~/.config/howl
