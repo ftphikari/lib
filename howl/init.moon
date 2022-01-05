@@ -10,3 +10,4 @@ bindings.push
   ctrl_q: 'run'
   ctrl_e: 'switch-to-last-hidden-buffer'
   ctrl_y: 'editor-redo'
+  ctrl_l: 'cursor-goto-line'
