@@ -29,7 +29,7 @@ go install github.com/mdempsky/gocode@latest
 
 git clone git@github.com:ftphikari/lib ~/lib
 
-grep 'lib/profile' ~/.bashrc || echo '. ~/lib/profile' >> ~/.bashrc
+grep 'lib/profile' ~/.profile || echo '. ~/lib/profile' >> ~/.profile
 
 mkdir -p ~/.config
 ln -fs ~/lib/gf2_config.ini ~/.config/gf2_config.ini
