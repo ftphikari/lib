@@ -15,7 +15,7 @@ export GIT_SSH_COMMAND="ssh -i ~/.ssh/hikari.key -o IdentitiesOnly=yes"
 
 export CHROMIUM_FLAGS="$(cat <<EOF
 --force-dark-mode
---enable-features=WebUIDarkMode,VaapiVideoDecoder
+--enable-features=WebUIDarkMode,VaapiVideoDecoder,WebRTCPipeWireCapturer
 --disable-features=UseSkiaRenderer
 --disable-gpu-rasterization
 EOF
