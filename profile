@@ -20,3 +20,7 @@ export CHROMIUM_FLAGS="$(cat <<EOF
 --disable-gpu-rasterization
 EOF
 )"
+
+export MESA_LOADER_DRIVER_OVERRIDE=i965
+export LIBVA_DRIVER_NAME=i965
+export VDPAU_DRIVER=va_gl

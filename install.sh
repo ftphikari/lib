@@ -33,6 +33,11 @@ grep 'lib/profile' ~/.profile || echo '. ~/lib/profile' >> ~/.profile
 
 mkdir -p ~/.config
 ln -fs ~/lib/gf2_config.ini ~/.config/gf2_config.ini
+
 mkdir -p ~/.config/mpv
 ln -fs ~/lib/mpv.conf ~/.config/mpv/mpv.conf
+
+mkdir -p ~/.config/youtube-dl
+ln -fs ~/lib/youtube-dl.conf ~/.config/youtube-dl/config
+
 ln -fs ~/lib/howl ~/.config/howl
