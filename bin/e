@@ -1,4 +1,0 @@
-#!/bin/sh
-# should probably just be an alias idk
-
-howl --reuse "$@"
