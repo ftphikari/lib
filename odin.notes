@@ -7,8 +7,8 @@ random in range
 	rand.uint32() % range
 
 memory arena
-	Kilobyte :: 1000
-	Megabyte :: 1000 * Kilobyte
+	Kilobyte :: 1024
+	Megabyte :: 1024 * Kilobyte
 	arena: mem.Arena
 	memory, err := mem.alloc_bytes(10 * Megabyte)
 	mem.init_arena(&arena, memory)
