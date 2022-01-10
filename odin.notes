@@ -7,12 +7,17 @@ random in range
 	rand.uint32() % range
 
 memory arena
-	Kilobyte :: 1024
-	Megabyte :: 1024 * Kilobyte
-	arena: mem.Arena
-	memory, err := mem.alloc_bytes(10 * Megabyte)
-	mem.init_arena(&arena, memory)
-	context.allocator = mem.arena_allocator(&arena)
+  make_arena :: proc(size: int) -> mem.Allocator {
+    memory, err := mem.alloc_bytes(size)
+    if err != nil {
+      log.fatal("Unable to allocate arena memory:", err)
+    }
+    a := new(mem.Arena)
+    mem.init_arena(a, memory)
+    return mem.arena_allocator(a)
+  }
+
+  arena := make_arena(mem.megabytes(10))
 
 temp arena memory
 	temp_memory := mem.begin_arena_temp_memory(&arena)
