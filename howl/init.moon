@@ -5,6 +5,7 @@ with config
   .auto_pair = false
   .complete = 'manual'
   .go_fmt_command = 'goimports'
+  .edge_column = 120
 
 bindings.push
   ctrl_q: 'switch-to-last-hidden-buffer'
