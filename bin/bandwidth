@@ -2,11 +2,7 @@
 # measure bandwidth
 
 init="$((`cat /sys/class/net/[ew]*/statistics/rx_bytes | paste -sd '+'`))"
-
 printf 'Recording bandwidth. Press enter to stop.'
-
-read -r lol
-
+read -r stop
 fin="$((`cat /sys/class/net/[ew]*/statistics/rx_bytes | paste -sd '+'`))"
-
 printf '%4sb of bandwidth used.\n' `numfmt --to=iec $(($fin-$init))`

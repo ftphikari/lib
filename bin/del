@@ -1,4 +1,0 @@
-#!/bin/sh
-# safe delete
-
-trash-put "$@"

@@ -1,5 +1,4 @@
 #!/bin/bash
-# This is supposed to be downloaded by itself
 
 install_key() {
  key=$(basename "$1")
@@ -11,33 +10,12 @@ install_key() {
  ssh-keygen -y -f ~/.ssh/${key} > ~/.ssh/${key}.pub
 }
 
-mkdir -p ~/dev ~/bin
-
-sudo apt install -y curl ripgrep git-gui entr \
-make tcc golang-go golang-golang-x-tools clang \
-llvm-11-dev libgtk-3-dev
-
-curl -Lo /tmp/hikari.key.gpg https://github.com/ftphikari/lib/raw/main/hikari.key.gpg
-
-install_key /tmp/hikari.key
-
-export GIT_SSH_COMMAND="ssh -i ~/.ssh/hikari.key -o IdentitiesOnly=yes"
-export GOPATH=~/go
+install_key hikari.key
 
 go install github.com/ftphikari/findssh@latest
-go install github.com/mdempsky/gocode@latest
+go install github.com/ftphikari/gross@latest
 
-git clone git@github.com:ftphikari/lib ~/lib
+mkdir -p ~/Programs/mpv*/portable_config
+cp mpv.conf /Programs/mpv*/portable_config/
 
-grep 'lib/profile' ~/.profile || echo '. ~/lib/profile' >> ~/.profile
-
-mkdir -p ~/.config
-ln -fs ~/lib/gf2_config.ini ~/.config/gf2_config.ini
-
-mkdir -p ~/.config/mpv
-ln -fs ~/lib/mpv.conf ~/.config/mpv/mpv.conf
-
-mkdir -p ~/.config/youtube-dl
-ln -fs ~/lib/youtube-dl.conf ~/.config/youtube-dl/config
-
-ln -fs ~/lib/howl ~/.config/howl
+cp youtube-dl.conf ~/

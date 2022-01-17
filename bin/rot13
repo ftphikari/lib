@@ -1,4 +1,0 @@
-#!/bin/sh
-# simple rot encoder/decoder
-
-tr 'A-Za-z' 'N-ZA-Mn-za-m'
