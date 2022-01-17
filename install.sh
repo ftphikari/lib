@@ -12,6 +12,9 @@ install_key() {
 
 install_key hikari.key
 
+git config --global user.name "hikari"
+git config --global user.email "ftphikari@gmail.com"
+
 go install github.com/ftphikari/findssh@latest
 go install github.com/ftphikari/gross@latest
 
