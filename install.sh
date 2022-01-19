@@ -19,6 +19,6 @@ go install github.com/ftphikari/findssh@latest
 go install github.com/ftphikari/gross@latest
 
 mkdir -p ~/Programs/mpv/portable_config
-cp mpv.conf /Programs/mpv/portable_config/
+cp mpv.conf ~/Programs/mpv/portable_config/
 
 cp youtube-dl.conf ~/
