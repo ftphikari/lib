@@ -15,6 +15,8 @@ install_key hikari.key
 cat >~/.ssh/config <<EOF
 Host github.com
     IdentityFile ~/.ssh/hikari.key
+Host aajonus.online
+    IdentityFile ~/.ssh/hikari.key
 EOF
 
 git config --global user.name "hikari"
