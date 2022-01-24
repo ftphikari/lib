@@ -12,6 +12,11 @@ install_key() {
 
 install_key hikari.key
 
+cat >~/.ssh/config <<EOF
+Host github.com
+    IdentityFile ~/.ssh/hikari.key
+EOF
+
 git config --global user.name "hikari"
 git config --global user.email "ftphikari@gmail.com"
 
