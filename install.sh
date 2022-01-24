@@ -20,8 +20,6 @@ Host aajonus.online
 EOF
 
 cat >~/.gitconfig <<EOF
-[credential]
-    helper = \"C:\\Users\\hikari\\Programs\\Git\\mingw64\\libexec\\git-core\\git-credential-manager-core.exe\"
 [core]
     editor = \"C:\\Users\\hikari\\Programs\\sublime_text\\subl.exe\" -n -w
 [user]
