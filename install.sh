@@ -19,6 +19,16 @@ Host aajonus.online
     IdentityFile ~/.ssh/hikari.key
 EOF
 
+cat >~/.gitconfig <<EOF
+[credential]
+    helper = \"C:\\Users\\hikari\\Programs\\Git\\mingw64\\libexec\\git-core\\git-credential-manager-core.exe\"
+[core]
+    editor = \"C:\\Users\\hikari\\Programs\\sublime_text\\subl.exe\" -n -w
+[user]
+    email = ftphikari@gmail.com
+    name = hikari
+EOF
+
 git config --global user.name "hikari"
 git config --global user.email "ftphikari@gmail.com"
 
