@@ -1,4 +1,0 @@
-#!/bin/sh
-# show untracked git files
-
-git ls-files . --exclude-standard --others "$@"
