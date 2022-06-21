@@ -1,4 +1,4 @@
 #!/bin/sh
 # get audio from youtube
 
-youtube-dl -x --audio-format vorbis --restrict-filenames -o "%(title)s.%(ext)s" "$@"
+yt-dlp -x --audio-format vorbis --restrict-filenames -o "%(title)s.%(ext)s" "$@"
